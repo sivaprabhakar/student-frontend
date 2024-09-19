@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './Components/Home';
-import StudentList from './components/StudentList';
-import CreateStudent from './components/CreateStudent';
-import EditStudent from './components/EditStudent';
+import StudentList from './Components/StudentList';
+import CreateStudent from './Components/CreateStudent';
+import EditStudent from './Components/EditStudent';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'; 
 
