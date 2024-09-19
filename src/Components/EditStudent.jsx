@@ -16,7 +16,7 @@ const EditStudent = () => {
   });
 
   useEffect(() => {
-    axios.get(`http://localhost:8000/student/${id}`)
+    axios.get(`/student/${id}`)
       .then((response) => {
         const studentData = response.data;
 
@@ -41,7 +41,7 @@ const EditStudent = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.put(`http://localhost:8000/update-student/${id}`, student)
+    axios.put(`/update-student/${id}`, student)
     .then(() => {
         toast.success('Student updated successfully!'); 
         navigate('/students'); 

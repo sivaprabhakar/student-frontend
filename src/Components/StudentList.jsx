@@ -8,13 +8,13 @@ const StudentList = () => {
   const [students, setStudents] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:8000/getAll')
+    axios.get('/getAll')
       .then((response) => setStudents(response.data))
       .catch((error) => console.error(error));
   }, []);
 
   const deleteStudent = (id) => {
-    axios.delete(`http://localhost:8000/delete-student/${id}`)
+    axios.delete(`/delete-student/${id}`)
       .then(() => {
         setStudents(students.filter(student => student.id !== id))
       toast.success('Student deleted successfully!'); 

@@ -20,7 +20,7 @@ const CreateStudent = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('http://localhost:8000/create-student', student)
+    axios.post('/create-student', student)
     .then(() => {
         toast.success('Student created successfully!'); 
         navigate('/students'); 
